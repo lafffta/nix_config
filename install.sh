@@ -7,3 +7,4 @@ sudo ln -s ./ /etc/nixos # Create symlink for root in nixos folder
 
 sudo nixos-rebuild switch # Deploy
 reboot # Reboot to refresh environment
+sleep 90
