@@ -107,7 +107,17 @@
   
   # Set default editor to vim
   environment.variables.EDITOR = "vim";
-  
+
+  # Limit the number of generations to keep
+  boot.loader.systemd-boot.configurationLimit = 10;
+  # boot.loader.grub.configurationLimit = 10;
+
+  # Perform garbage collection weekly to maintain low disk usage
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+ };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
