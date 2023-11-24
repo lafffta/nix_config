@@ -41,10 +41,12 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # Configure keymap in X11
   services.xserver = {
     layout = "us";
-    xkbVariant = "";
+    xkbVariant = ""; # Configure keymap in X11
+
+    enable = true;
+    windowManager.awesome.enable = true; # Window manager enable
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -67,21 +69,16 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     curl
-    pkgs.hyprpicker
-    pkgs.hyprpaper
+
+    hardinfo
+    spectacle
+    dolphin
+    monitor
+
 
     # Install Helix from the `helix` input
     # helix.packages."${pkgs.system}".helix # { config, pkgs, helix, ... }: above^^^
   ];
-
-  # KDE
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-  # awesomeWM
-  # services.xserver.enable = true;
-  # services.xserver.windowManager.awesome.enable = true;
 
   # This will add each flake input as a registry
   # To make nix3 commands consistent with your flake
