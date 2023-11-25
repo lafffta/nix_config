@@ -54,6 +54,13 @@
     discord
     stremio
     ungoogled-chromium
+
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.remove-app-menu
+    gnomeExtensions.rounded-window-corners
+    gnomeExtensions.compiz-windows-effect
+
+    qogir-icon-theme
   ];
 
   programs.neovim.enable = true;
