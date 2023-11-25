@@ -46,8 +46,26 @@
     xkbVariant = ""; # Configure keymap in X11
 
     enable = true;
-    windowManager.awesome.enable = true; # Window manager enable
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
   };
+
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    gnome-music
+    gnome-terminal
+    gedit # text editor
+    epiphany # web browser
+    geary # email reader
+    evince # document viewer
+    totem # video player
+    tali # poker game
+    iagno # go game
+    hitori # sudoku game
+    atomix # puzzle game
+  ]);
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.abjelke = {
@@ -56,7 +74,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     # User packages
     packages = with pkgs; [
-      firefox
+      
     ];
   };
 
@@ -70,9 +88,9 @@
     wget
     curl
 
+    firefox
     hardinfo
     spectacle
-    dolphin
     monitor
 
 
