@@ -59,6 +59,7 @@
     gnomeExtensions.remove-app-menu
     gnomeExtensions.rounded-window-corners
     gnomeExtensions.compiz-windows-effect
+    gnomeExtensions.forge
 
     qogir-icon-theme
   ];

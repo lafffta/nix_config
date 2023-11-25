@@ -104,6 +104,7 @@
     firefox
     hardinfo
     spectacle
+    blackbox-terminal
 
     gnome.gnome-tweaks
     gnome.gnome-shell-extensions
