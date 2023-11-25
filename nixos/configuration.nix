@@ -105,6 +105,9 @@
     hardinfo
     spectacle
 
+    gnome.gnome-tweaks
+    gnome.gnome-shell-extensions
+
     # Install Helix from the `helix` input
     # helix.packages."${pkgs.system}".helix # { config, pkgs, helix, ... }: above^^^
   ];
