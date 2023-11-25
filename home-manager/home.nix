@@ -28,17 +28,6 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     neofetch
-    nnn # terminal file manager
-
-    # archives
-    zip
-    xz
-    unzip
-    p7zip
-
-    # `nom` works just like `nix` with more details log output
-    nix-output-monitor
-
 
     tor-browser-bundle-bin
     vscodium

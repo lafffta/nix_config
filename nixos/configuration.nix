@@ -45,6 +45,8 @@
     layout = "us";
     xkbVariant = ""; # Configure keymap in X11
 
+    videoDrivers = ["virtualbox"]; 
+
     enable = true;
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
@@ -88,11 +90,20 @@
     wget
     curl
 
+    nnn # terminal file manager
+
+    # archives
+    zip
+    xz
+    unzip
+    p7zip
+
+    # `nom` works just like `nix` with more details log output
+    nix-output-monitor
+
     firefox
     hardinfo
     spectacle
-    monitor
-
 
     # Install Helix from the `helix` input
     # helix.packages."${pkgs.system}".helix # { config, pkgs, helix, ... }: above^^^
