@@ -43,7 +43,6 @@
     obs-studio
     logseq
     syncthing
-    flatpak
     distrobox
 
     steam
@@ -55,13 +54,12 @@
     stremio
     ungoogled-chromium
 
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.remove-app-menu
-    gnomeExtensions.rounded-window-corners
-    gnomeExtensions.compiz-windows-effect
-    gnomeExtensions.forge
-
     qogir-icon-theme
+
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.rounded-window-corners
+    gnomeExtensions.dash-to-panel
+    gnomeExtensions.tiling-assistant
   ];
 
   programs.neovim.enable = true;
