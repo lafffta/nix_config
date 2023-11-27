@@ -45,6 +45,7 @@
     layout = "us";
     xkbVariant = ""; # Configure keymap in X11
 
+  ##################################################################
     videoDrivers = ["virtualbox"]; 
 
     enable = true;
@@ -101,19 +102,10 @@
     # `nom` works just like `nix` with more details log output
     nix-output-monitor
 
-    firefox
-    hardinfo
-    spectacle
-    blackbox-terminal
-
-    gnome.gnome-tweaks
-    gnome.gnome-shell-extensions
-
     # Install Helix from the `helix` input
     # helix.packages."${pkgs.system}".helix # { config, pkgs, helix, ... }: above^^^
   ];
-
-  services.flatpak.enable = true;
+  ##################################################################
 
   # This will add each flake input as a registry
   # To make nix3 commands consistent with your flake

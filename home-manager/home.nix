@@ -27,7 +27,27 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
+    git
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    curl
+
+    nnn # terminal file manager
+
+    # archives
+    zip
+    xz
+    unzip
+    p7zip
+
+    # `nom` works just like `nix` with more details log output
+    nix-output-monitor
+
     neofetch
+    flatpak
+    firefox
+    hardinfo
+    spectacle
 
     tor-browser-bundle-bin
     vscodium
@@ -55,6 +75,9 @@
     ungoogled-chromium
 
     qogir-icon-theme
+
+    gnome.gnome-tweaks
+    gnome.gnome-shell-extensions
 
     gnomeExtensions.blur-my-shell
     gnomeExtensions.rounded-window-corners

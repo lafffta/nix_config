@@ -2,6 +2,8 @@
 
 # Add flathub repo
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+# Install flatseal for managing flatpak permissions
+flatpak install flathub com.github.tchx84.Flatseal
 
 ##### How to update system #####
 # Update flake.lock
