@@ -46,7 +46,6 @@
     neofetch
     flatpak
     firefox
-    hardinfo
     spectacle
 
     tor-browser-bundle-bin
