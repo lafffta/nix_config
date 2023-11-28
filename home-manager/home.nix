@@ -28,6 +28,10 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     neofetch
+    htop
+    cmatrix
+    cowsay
+
     flatpak
     firefox
     spectacle
