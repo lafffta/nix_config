@@ -111,10 +111,9 @@
       urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
     };
   };
-
-  # home.file."/.themes/CustomShellTheme/gnome-shell/gnome-shell.css".source = ./Gnome-topbar-le-dots/Gnome-shell.css;
-  # home.file."/.themes/CustomShellTheme/gnome-shell/toggle10-off.svg".source = ./Gnome-topbar-le-dots/toggle10-off.svg;
-  # home.file."/.themes/CustomShellTheme/gnome-shell/toggle10-on.svg".source = ./Gnome-topbar-le-dots/toggle10-on.svg;
+  
+  # v0.7.1
+  home.file."/.themes/Catppuccin-Mocha-Standard-Blue-Dark".source = ./Catppuccin-Mocha-Standard-Blue-Dark/Catppuccin-Mocha-Standard-Blue-Dark;
 
   ##################################################################
 
