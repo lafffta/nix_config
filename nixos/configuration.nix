@@ -83,6 +83,8 @@
     desktopManager.gnome.enable = true;
   };
 
+  services.printing.enable = true;
+
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
@@ -153,9 +155,17 @@
     nvidia.modesetting.enable = true;
   };
 
-  # Enable sound
+  # Enable sound with pipewire
   sound.enable = true;
+  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # jack.enable = true; # for JACK applications
+  };
 
   ##################################################################
 

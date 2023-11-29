@@ -18,13 +18,6 @@
     homeDirectory = "/home/abjelke";
   };
 
-  # basic configuration of git
-  programs.git = {
-    enable = true;
-    userName = "Aidan Bjelke";
-    userEmail = "aidanbjelke@gmail.com";
-  };
-
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # Browsers

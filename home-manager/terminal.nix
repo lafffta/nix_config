@@ -6,6 +6,13 @@
   ...
 }: {
 
+  # basic configuration of git
+  programs.git = {
+    enable = true;
+    userName = "Aidan Bjelke";
+    userEmail = "aidanbjelke@gmail.com";
+  };
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
