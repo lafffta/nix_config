@@ -20,10 +20,40 @@
     ./hardware-configuration.nix
   ];
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  nixpkgs = {
+    # You can add overlays here
+    overlays = [
+      # If you want to use overlays exported from other flakes:
+      # neovim-nightly-overlay.overlays.default
+
+      # Or define it inline, for example:
+      # (final: prev: {
+      #   hi = final.hello.overrideAttrs (oldAttrs: {
+      #     patches = [ ./change-hello-to-hi.patch ];
+      #   });
+      # })
+    ];
+    # Configure your nixpkgs instance
+    config = {
+      # Disable if you don't want unfree packages
+      allowUnfree = true;
+    };
+  };
+
+  # Bootloader config
+  boot.loader.grub = {
+    enable = true;
+    device = "/dev/sda";
+    useOSProber = true;
+    configurationLimit = 10; # Limit the number of generations to keep
+  };
+
+  # Perform garbage collection weekly to maintain low disk usage
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+ };
 
   networking.hostName = "nixos"; # Define your hostname.
   #  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -71,17 +101,20 @@
   ]);
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.abjelke = {
-    isNormalUser = true;
-    description = "Aidan Bjelke";
-    extraGroups = [ "networkmanager" "wheel" ];
-    # User packages
-    packages = with pkgs; [
-      
-    ];
+  users.users = {
+    abjelke = {
+      isNormalUser = true;
+      description = "Aidan Bjelke";
+      # openssh.authorizedKeys.keys = [
+        
+      # ];
+      extraGroups = [ "networkmanager" "wheel" ];
+      # User packages
+      packages = with pkgs; [
+        
+      ];
+    };
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -147,20 +180,10 @@
     # Deduplicate and optimize nix store
     auto-optimise-store = true;
   };
-  
+
   # Set default editor to vim
   environment.variables.EDITOR = "vim";
 
-  # Limit the number of generations to keep
-  boot.loader.systemd-boot.configurationLimit = 10;
-  # boot.loader.grub.configurationLimit = 10;
-
-  # Perform garbage collection weekly to maintain low disk usage
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 1w";
- };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
