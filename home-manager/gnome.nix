@@ -10,6 +10,8 @@
   home.file."/.themes/Catppuccin-Mocha-Standard-Blue-Dark".source = ./Catppuccin-Mocha-Standard-Blue-Dark/Catppuccin-Mocha-Standard-Blue-Dark;
 
   home.packages = with pkgs; [
+    qogir-icon-theme
+
     gnome.gnome-tweaks
     gnome.gnome-shell-extensions
 

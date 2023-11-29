@@ -27,45 +27,43 @@
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    neofetch
-    htop
-    cmatrix
-    cowsay
-
-    flatpak
+    # Browsers
     firefox
-    spectacle
-
+    ungoogled-chromium
     mullvad-browser
     tor-browser-bundle-bin
-    vscodium
-    vlc
-    onlyoffice-bin
-    audacity
-    strawberry
+
+    # Essential
+    flatpak
+    distrobox
     bottles
+
+    # Productivity
+    vscodium
+    onlyoffice-bin
     okteta
+    logseq
+    obs-studio
     gimp-with-plugins
     blender
     godot_4
-    obs-studio
-    logseq
-    syncthing
-    distrobox
 
+    # Entertainment
+    discord
+    stremio
     steam
     lutris
     heroic
     prismlauncher
 
-    discord
-    stremio
-    ungoogled-chromium
-
-    qogir-icon-theme
+    # Utilities
+    spectacle
+    vlc
+    audacity
+    cmus
+    syncthing
+    
   ];
-
-  programs.neovim.enable = true;
 
   ##################################################################
 

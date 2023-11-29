@@ -20,6 +20,15 @@
       urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
     };
   };
+  
+  programs.neovim.enable = true;
+
+  home.packages = with pkgs; [
+    neofetch
+    htop
+    cmatrix
+    cowsay
+  ];
 
   # starship - an customizable prompt for any shell
   programs.starship = {
