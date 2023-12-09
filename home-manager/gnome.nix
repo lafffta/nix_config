@@ -6,11 +6,9 @@
   ...
 }: {
 
-  # Catppuccin GTK theme v0.7.1
-  home.file."/.themes/Catppuccin-Mocha-Standard-Blue-Dark".source = ./Catppuccin-Mocha-Standard-Blue-Dark/Catppuccin-Mocha-Standard-Blue-Dark;
-
   home.packages = with pkgs; [
     qogir-icon-theme
+    catppuccin-gtk
 
     gnome.gnome-tweaks
     gnome.gnome-shell-extensions

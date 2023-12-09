@@ -8,6 +8,7 @@
 
   home.packages = with pkgs; [
     qogir-icon-theme
+    catppuccin-kde
   ];
 
 
