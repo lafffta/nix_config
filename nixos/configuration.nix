@@ -41,12 +41,14 @@
   };
 
   # Bootloader config
-  boot.loader.grub = {
-    enable = true;
-    device = "nodev";
-    useOSProber = true;
-    configurationLimit = 10; # Limit the number of generations to keep
-  };
+  # boot.loader.grub = {
+  #   enable = true;
+  #   device = "nodev";
+  #   useOSProber = true;
+  #   configurationLimit = 10; # Limit the number of generations to keep
+  # };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
@@ -76,11 +78,14 @@
     xkbVariant = ""; # Configure keymap in X11
 
   ##################################################################
-    videoDrivers = ["virtualbox"]; 
 
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    # displayManager.gdm.enable = true;
+    # desktopManager.gnome.enable = true;
+    
+    # KDE
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
   };
 
   services.printing.enable = true;
