@@ -45,6 +45,7 @@
     discord
     stremio
     steam
+    steam-run
     lutris
     heroic
     prismlauncher
