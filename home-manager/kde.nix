@@ -11,7 +11,7 @@
     catppuccin-kde
     catppuccin-gtk
 
-    latte-dock
+    # latte-dock
 
     touchegg
   ];

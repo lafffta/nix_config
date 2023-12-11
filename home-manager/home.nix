@@ -29,13 +29,13 @@
     # Essential
     flatpak
     distrobox
+    wine
     bottles
 
     # Productivity
     vscodium
     onlyoffice-bin
     okteta
-    logseq
     obs-studio
     gimp-with-plugins
     blender
