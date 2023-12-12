@@ -81,12 +81,12 @@
   ##################################################################
 
     enable = true;
-    # displayManager.gdm.enable = true;
-    # desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
     
     # KDE
-    displayManager.sddm.enable = true;
-    desktopManager.plasma5.enable = true;
+    # displayManager.sddm.enable = true;
+    # desktopManager.plasma5.enable = true;
   };
 
   services.printing.enable = true;

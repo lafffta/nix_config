@@ -9,7 +9,7 @@
   imports = [
     ./terminal.nix
 
-    ./kde.nix
+    ./gnome.nix
   ];
 
   ##################################################################
@@ -39,7 +39,7 @@
     obs-studio
     gimp-with-plugins
     blender
-    godot_4
+    dotnet-sdk_8
 
     # Entertainment
     discord
