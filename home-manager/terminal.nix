@@ -33,6 +33,7 @@
   home.packages = with pkgs; [
     neofetch
     htop
+    btop
     cmatrix
     cowsay
   ];
