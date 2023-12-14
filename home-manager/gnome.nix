@@ -24,10 +24,10 @@
       package = pkgs.qogir-icon-theme;
     };
 
-    # theme = {
-    #   name = "Catppuccin-Frappe-Standard-Blue-Dark";
-    #   package = pkgs.catppuccin-gtk;
-    # };
+    theme = {
+      name = "Catppuccin-Frappe-Standard-Blue-Dark";
+      package = pkgs.catppuccin-gtk;
+    };
 
     cursorTheme = {
       name = "Qogir-dark";
@@ -47,6 +47,6 @@
     };
   };
 
-  # home.sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+  home.sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
 
 }
