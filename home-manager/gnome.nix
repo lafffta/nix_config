@@ -6,14 +6,14 @@
   ...
 }: {
 
-  home.packages = with pkgs; [
-    gnome.gnome-tweaks
-    gnome.gnome-shell-extensions
+  imports = [
+    ./gnomeExtensions.nix
+  ];
 
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.rounded-window-corners
-    gnomeExtensions.dash-to-panel
-    gnomeExtensions.tiling-assistant
+
+  home.packages = with pkgs.gnome; [
+    gnome-tweaks
+    gnome-shell-extensions
   ];
 
   gtk = {
@@ -24,10 +24,10 @@
       package = pkgs.qogir-icon-theme;
     };
 
-    theme = {
-      name = "Catppuccin-Frappe-Standard-Blue-Dark";
-      package = pkgs.catppuccin-gtk;
-    };
+    # theme = {
+    #   name = "Catppuccin-Frappe-Standard-Blue-Dark";
+    #   package = pkgs.catppuccin-gtk;
+    # };
 
     cursorTheme = {
       name = "Qogir-dark";
@@ -47,6 +47,6 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
+  # home.sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-Dark";
 
 }
