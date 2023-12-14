@@ -34,6 +34,20 @@
     ]; 
     "org/gnome/shell".disabled-extensions = [];
 
+    "org/gnome/shell".favorite-apps = [
+      "org.gnome.Nautilus.desktop"
+      "firefox.desktop"
+      "mullvadbrowser.desktop"
+      "smartcode-stremio.desktop"
+      "discord.desktop"
+      "steam.desktop"
+      "net.lutris.Lutris.desktop"
+      "com.heroicgameslauncher.hgl.desktop"
+      "com.jagex.Launcher.desktop"
+      "Alacritty.desktop"
+      "codium.desktop"
+    ];
+
     "org/gnome/shell/extensions/arcmenu" = {
       arc-menu-icon=5;
       distro-icon=1;
