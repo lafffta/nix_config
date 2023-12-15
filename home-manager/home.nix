@@ -59,7 +59,7 @@
     
   ];
 
-  home.file."~/.mozilla/firefox/yz0zs1f0.default/chrome".source = ./userChrome.css;
+  home.file."/.mozilla/firefox/yz0zs1f0.default/chrome/userChrome.css".source = ./userChrome.css;
 
   ##################################################################
 
