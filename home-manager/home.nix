@@ -59,6 +59,8 @@
     
   ];
 
+  home.file."~/.mozilla/firefox/yz0zs1f0.default/chrome".source = ./userChrome.css;
+
   ##################################################################
 
   # Let home Manager install and manage itself.
