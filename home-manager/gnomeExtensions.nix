@@ -34,6 +34,11 @@
     ]; 
     "org/gnome/shell".disabled-extensions = [];
 
+    "org/gnome/shell".show-battery-percentage = false;
+
+    "org/gnome/shell".tap-to-click=true;
+    "org/gnome/shell".two-finger-scrolling-enabled=true;
+
     "org/gnome/shell".favorite-apps = [
       "org.gnome.Nautilus.desktop"
       "firefox.desktop"
