@@ -90,6 +90,8 @@
     desktopManager.plasma5.enable = true;
   };
 
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true;
   services.printing.enable = true;
 
   environment.gnome.excludePackages = (with pkgs; [
