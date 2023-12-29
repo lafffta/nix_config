@@ -94,6 +94,8 @@
   hardware.bluetooth.enable = true;
   services.printing.enable = true;
 
+  virtualisation.containers.enable = true;
+
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour

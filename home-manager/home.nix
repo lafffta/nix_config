@@ -29,6 +29,8 @@
     # Essential
     flatpak
     distrobox
+    podman
+    docker
     wine
     bottles
 
