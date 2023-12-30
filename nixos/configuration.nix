@@ -94,6 +94,7 @@
   hardware.bluetooth.enable = true;
   services.printing.enable = true;
 
+  programs.direnv.enable = true;
   virtualisation.containers.enable = true;
 
   environment.gnome.excludePackages = (with pkgs; [
@@ -170,6 +171,7 @@
   hardware = {
     # Opengl
     opengl.enable = true;
+    opengl.driSupport32Bit = true;
     # Most wayland compositors need this
     nvidia.modesetting.enable = true;
   };
