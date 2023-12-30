@@ -62,6 +62,9 @@
       };
       scrolling.multiplier = 5;
       selection.save_to_clipboard = true;
+
+      window.opacity = 0.8;
+      window.title = "Terminal";
     };
   };
 
