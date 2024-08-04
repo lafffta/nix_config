@@ -14,8 +14,8 @@
 
   ##################################################################
   home = {
-    username = "abjelke";
-    homeDirectory = "/home/abjelke";
+    username = "aidanb";
+    homeDirectory = "/home/aidanb";
   };
 
   # Packages that should be installed to the user profile.

@@ -18,7 +18,7 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
-    ./laptop.nix
+    # ./laptop.nix
   ];
 
   nixpkgs = {
@@ -42,14 +42,14 @@
   };
 
   # Bootloader config
-  # boot.loader.grub = {
-  #   enable = true;
-  #   device = "nodev";
-  #   useOSProber = true;
-  #   configurationLimit = 10; # Limit the number of generations to keep
-  # };
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+   boot.loader.grub = {
+     enable = true;
+     device = "nodev";
+     useOSProber = true;
+     configurationLimit = 10; # Limit the number of generations to keep
+   };
+  #boot.loader.systemd-boot.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
 
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
@@ -137,7 +137,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users = {
-    abjelke = {
+    aidanb = {
       isNormalUser = true;
       description = "Aidan Bjelke";
       # openssh.authorizedKeys.keys = [
