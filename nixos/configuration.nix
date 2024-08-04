@@ -18,7 +18,9 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
+
     # ./laptop.nix
+    ./vm.nix
   ];
 
   nixpkgs = {
@@ -40,16 +42,6 @@
       allowUnfree = true;
     };
   };
-
-  # Bootloader config
-   boot.loader.grub = {
-     enable = true;
-     device = "nodev";
-     useOSProber = true;
-     configurationLimit = 10; # Limit the number of generations to keep
-   };
-  #boot.loader.systemd-boot.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
 
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
@@ -86,9 +78,19 @@
     # desktopManager.gnome.enable = true;
     
     # KDE
-    displayManager.sddm.enable = true;
-    desktopManager.plasma5.enable = true;
+    # displayManager.sddm.enable = true;
+    # desktopManager.plasma5.enable = true;
+
+    # Cinnamon
+    libinput.enable = true;
+		displayManager.lightdm.enable = true;
+		desktopManager = {
+			cinnamon.enable = true;
+		};
+		displayManager.defaultSession = "cinnamon";
   };
+
+  xdg.portal.enable = true;
 
   # services.blueman.enable = true;
   hardware.bluetooth = {
